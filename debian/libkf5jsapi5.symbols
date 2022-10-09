@@ -1,0 +1,108 @@
+# SymbolsHelper-Confirmed: 5.70.0 amd64
+libKF5JSApi.so.5 libkf5jsapi5 #MINVER#
+* Build-Depends-Package: libkf5kjs-dev
+ _ZN10KJSBooleanC1Eb@Base 4.96.0
+ _ZN10KJSBooleanC2Eb@Base 4.96.0
+ _ZN10KJSContext11interpreterEv@Base 4.96.0
+ _ZN10KJSContextC1EP16KJSContextHandle@Base 4.96.0
+ _ZN10KJSContextC2EP16KJSContextHandle@Base 4.96.0
+ _ZN12KJSPrototype14defineConstantERK7QStringRK9KJSObject@Base 4.96.0
+ _ZN12KJSPrototype14defineConstantERK7QStringS2_@Base 4.96.0
+ _ZN12KJSPrototype14defineConstantERK7QStringd@Base 4.96.0
+ _ZN12KJSPrototype14defineFunctionEP10KJSContextRK7QStringPF9KJSObjectS1_PvRK12KJSArgumentsE@Base 4.96.0
+ _ZN12KJSPrototype14definePropertyEP10KJSContextRK7QStringPF9KJSObjectS1_PvEPFvS1_S6_S5_E@Base 4.96.0
+ _ZN12KJSPrototype15constructObjectEP10KJSContextPv@Base 4.96.0
+ _ZN12KJSPrototype21constructGlobalObjectEPv@Base 4.96.0
+ _ZN12KJSPrototypeC1Ev@Base 4.96.0
+ _ZN12KJSPrototypeC2Ev@Base 4.96.0
+ _ZN12KJSPrototypeD1Ev@Base 4.96.0
+ _ZN12KJSPrototypeD2Ev@Base 4.96.0
+ _ZN12KJSUndefinedC1Ev@Base 4.96.0
+ _ZN12KJSUndefinedC2Ev@Base 4.96.0
+ _ZN14KJSInterpreter12globalObjectEv@Base 4.96.0
+ _ZN14KJSInterpreter13globalContextEv@Base 4.96.0
+ _ZN14KJSInterpreter13normalizeCodeERK7QStringPS0_PiS3_@Base 4.96.0
+ _ZN14KJSInterpreter14setTimeoutTimeEj@Base 5.69.0
+ _ZN14KJSInterpreter16stopTimeoutCheckEv@Base 5.69.0
+ _ZN14KJSInterpreter17startTimeoutCheckEv@Base 5.69.0
+ _ZN14KJSInterpreter8evaluateERK7QStringP9KJSObject@Base 4.96.0
+ _ZN14KJSInterpreter8evaluateERK7QStringiS2_P9KJSObject@Base 4.96.0
+ _ZN14KJSInterpreterC1EP20KJSInterpreterHandle@Base 4.96.0
+ _ZN14KJSInterpreterC1ERK15KJSGlobalObject@Base 4.96.0
+ _ZN14KJSInterpreterC1ERKS_@Base 4.96.0
+ _ZN14KJSInterpreterC1Ev@Base 4.96.0
+ _ZN14KJSInterpreterC2EP20KJSInterpreterHandle@Base 4.96.0
+ _ZN14KJSInterpreterC2ERK15KJSGlobalObject@Base 4.96.0
+ _ZN14KJSInterpreterC2ERKS_@Base 4.96.0
+ _ZN14KJSInterpreterC2Ev@Base 4.96.0
+ _ZN14KJSInterpreterD1Ev@Base 4.96.0
+ _ZN14KJSInterpreterD2Ev@Base 4.96.0
+ _ZN14KJSInterpreteraSERKS_@Base 4.96.0
+ _ZN15KJSGlobalObjectC1Ev@Base 4.96.0
+ _ZN15KJSGlobalObjectC2Ev@Base 4.96.0
+ (arch=!armel !armhf)_ZN3KJS6JSCell4markEv@Base 5.0.0
+ (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD0Ev@Base 4.96.0
+ (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD1Ev@Base 4.96.0
+ (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD2Ev@Base 4.96.0
+ _ZN7KJSDateC1EP10KJSContextRK9QDateTime@Base 4.96.0
+ _ZN7KJSDateC2EP10KJSContextRK9QDateTime@Base 4.96.0
+ _ZN7KJSNullC1Ev@Base 4.96.0
+ _ZN7KJSNullC2Ev@Base 4.96.0
+ _ZN8KJSArrayC1EP10KJSContexti@Base 4.96.0
+ _ZN8KJSArrayC2EP10KJSContexti@Base 4.96.0
+ _ZN9KJSNumberC1Ed@Base 4.96.0
+ _ZN9KJSNumberC2Ed@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringPKc@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringRKS_@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringS4_@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringb@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringd@Base 4.96.0
+ _ZN9KJSObject11setPropertyEP10KJSContextRK7QStringi@Base 4.96.0
+ _ZN9KJSObject7toInt32EP10KJSContext@Base 4.96.0
+ _ZN9KJSObject8propertyEP10KJSContextRK7QString@Base 4.96.0
+ _ZN9KJSObject8toNumberEP10KJSContext@Base 4.96.0
+ _ZN9KJSObject8toStringEP10KJSContext@Base 4.96.0
+ _ZN9KJSObject9toBooleanEP10KJSContext@Base 4.96.0
+ _ZN9KJSObjectC1ERKS_@Base 4.96.0
+ _ZN9KJSObjectC1Ev@Base 4.96.0
+ _ZN9KJSObjectC2ERKS_@Base 4.96.0
+ _ZN9KJSObjectC2Ev@Base 4.96.0
+ _ZN9KJSObjectD1Ev@Base 4.96.0
+ _ZN9KJSObjectD2Ev@Base 4.96.0
+ _ZN9KJSObjectaSERKS_@Base 4.96.0
+ _ZN9KJSResultC1ERKS_@Base 4.96.0
+ _ZN9KJSResultC1Ev@Base 4.96.0
+ _ZN9KJSResultC2ERKS_@Base 4.96.0
+ _ZN9KJSResultC2Ev@Base 4.96.0
+ _ZN9KJSResultD1Ev@Base 4.96.0
+ _ZN9KJSResultD2Ev@Base 4.96.0
+ _ZN9KJSResultaSERKS_@Base 4.96.0
+ _ZN9KJSStringC1EPKc@Base 4.96.0
+ _ZN9KJSStringC1ERK7QString@Base 4.96.0
+ _ZN9KJSStringC2EPKc@Base 4.96.0
+ _ZN9KJSStringC2ERK7QString@Base 4.96.0
+ _ZNK10KJSContext12hasExceptionEv@Base 4.96.0
+ _ZNK10KJSContext14throwExceptionERK7QString@Base 4.96.0
+ _ZNK12KJSArguments2atEi@Base 4.96.0
+ _ZNK12KJSArguments5countEv@Base 4.96.0
+ _ZNK3KJS8JSObject11toPrimitiveEPNS_9ExecStateENS_6JSTypeE@Base 4.96.0
+ _ZNK9KJSObject11isUndefinedEv@Base 4.96.0
+ _ZNK9KJSObject6isNullEv@Base 4.96.0
+ _ZNK9KJSObject8isNumberEv@Base 4.96.0
+ _ZNK9KJSObject8isObjectEv@Base 4.96.0
+ _ZNK9KJSObject8isStringEv@Base 4.96.0
+ _ZNK9KJSObject9isBooleanEv@Base 4.96.0
+ _ZNK9KJSResult11isExceptionEv@Base 4.96.0
+ _ZNK9KJSResult12errorMessageEv@Base 4.96.0
+ _ZNK9KJSResult5valueEv@Base 4.96.0
+ (arch=!armel !armhf)_ZTIN14WTFNoncopyable11NoncopyableE@Base 4.96.0
+ _ZTIN3KJS14JSGlobalObjectE@Base 4.96.0
+ (arch=!armel !armhf)_ZTIN3KJS6JSCellE@Base 5.0.0
+ (arch=!armel !armhf)_ZTIN3KJS7JSValueE@Base 4.96.0
+ (arch=!armel !armhf)_ZTSN14WTFNoncopyable11NoncopyableE@Base 4.96.0
+ _ZTSN3KJS14JSGlobalObjectE@Base 4.96.0
+ (arch=!armel !armhf)_ZTSN3KJS6JSCellE@Base 5.0.0
+ (arch=!armel !armhf)_ZTSN3KJS7JSValueE@Base 4.96.0
+ _ZTVN3KJS14JSGlobalObjectE@Base 4.96.0
+ (arch=!armel !armhf)_ZTVN3KJS6JSCellE@Base 5.0.0
+ (arch=!armel !armhf)_ZTVN3KJS7JSValueE@Base 4.96.0

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<descriptor>
+
+<version>
+    5.1.0
+</version>
+
+<headers>
+    /usr/include/KF5/kjs/
+    /usr/include/KF5/wtf/
+</headers>
+
+<skip_headers>
+    /usr/include/KF5/kjs/grammar.h
+</skip_headers>
+
+<libs>
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libKF5JS.so
+    /usr/lib/@@DEB_HOST_MULTIARCH@@/libKF5JSApi.so
+</libs>
+
+<gcc_options>
+    -fPIC
+    -std=c++11
+</gcc_options>
+
+</descriptor>
