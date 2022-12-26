@@ -62,11 +62,11 @@ class JSVariableObject : public JSObject
 {
 public:
     using KJS::JSObject::deleteProperty;
-    virtual bool deleteProperty(ExecState *, const Identifier &);
+    bool deleteProperty(ExecState *, const Identifier &) override;
 
-    virtual void getOwnPropertyNames(ExecState *, PropertyNameArray &, PropertyMap::PropertyMode mode);
+    void getOwnPropertyNames(ExecState *, PropertyNameArray &, PropertyMap::PropertyMode mode) override;
 
-    virtual void mark();
+    void mark() override;
 
     enum {
         LengthSlot,
@@ -97,7 +97,7 @@ public:
     }
 protected:
     JSVariableObject(): localStorage(nullptr), symbolTable(nullptr) { }
-    ~JSVariableObject();
+    ~JSVariableObject() override;
 
     bool symbolTableGet(const Identifier &, PropertySlot &);
     bool symbolTablePut(const Identifier &, JSValue *, bool checkReadOnly);
@@ -187,7 +187,7 @@ class KJS_EXPORT JSGlobalObject :  public JSObject // ### TODO: should inherit o
 public:
     JSGlobalObject(): m_interpreter(nullptr) {}
     JSGlobalObject(JSValue *proto): JSObject(proto), m_interpreter(nullptr) {}
-    virtual bool isGlobalObject() const
+    bool isGlobalObject() const override
     {
         return true;
     }

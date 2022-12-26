@@ -70,21 +70,21 @@ struct ClassInfo {
 class GetterSetterImp : public JSCell
 {
 public:
-    JSType type() const
+    JSType type() const override
     {
         return GetterSetterType;
     }
 
     GetterSetterImp() : getter(nullptr), setter(nullptr) { }
 
-    virtual JSValue *toPrimitive(ExecState *exec, JSType preferred = UnspecifiedType) const;
-    virtual bool getPrimitiveNumber(ExecState *, double &number, JSValue *&value);
-    virtual bool toBoolean(ExecState *exec) const;
-    virtual double toNumber(ExecState *exec) const;
-    virtual UString toString(ExecState *exec) const;
-    virtual JSObject *toObject(ExecState *exec) const;
+    JSValue *toPrimitive(ExecState *exec, JSType preferred = UnspecifiedType) const override;
+    bool getPrimitiveNumber(ExecState *, double &number, JSValue *&value) override;
+    bool toBoolean(ExecState *exec) const override;
+    double toNumber(ExecState *exec) const override;
+    UString toString(ExecState *exec) const override;
+    JSObject *toObject(ExecState *exec) const override;
 
-    virtual void mark();
+    void mark() override;
 
     JSObject *getGetter()
     {
@@ -124,8 +124,8 @@ public:
      */
     explicit JSObject();
 
-    virtual void mark();
-    virtual JSType type() const;
+    void mark() override;
+    JSType type() const override;
 
     /**
      * A pointer to a ClassInfo struct for this class. This provides a basic
@@ -438,12 +438,12 @@ public:
     void getPropertyNames(ExecState *, PropertyNameArray &, PropertyMap::PropertyMode mode = PropertyMap::ExcludeDontEnumProperties);
     virtual void getOwnPropertyNames(ExecState *, PropertyNameArray &, PropertyMap::PropertyMode mode);
 
-    virtual JSValue *toPrimitive(ExecState *exec, JSType preferredType = UnspecifiedType) const;
-    virtual bool getPrimitiveNumber(ExecState *, double &number, JSValue *&value);
-    virtual bool toBoolean(ExecState *exec) const;
-    virtual double toNumber(ExecState *exec) const;
-    virtual UString toString(ExecState *exec) const;
-    virtual JSObject *toObject(ExecState *exec) const;
+    JSValue *toPrimitive(ExecState *exec, JSType preferredType = UnspecifiedType) const override;
+    bool getPrimitiveNumber(ExecState *, double &number, JSValue *&value) override;
+    bool toBoolean(ExecState *exec) const override;
+    double toNumber(ExecState *exec) const override;
+    UString toString(ExecState *exec) const override;
+    JSObject *toObject(ExecState *exec) const override;
 
     virtual bool getPropertyAttributes(const Identifier &propertyName, unsigned &attributes) const;
 
@@ -634,7 +634,7 @@ inline void JSObject::fillDirectLocationSlot(PropertySlot &slot,
         JSValue **location)
 {
     if (_prop.hasGetterSetterProperties() &&
-            (*location)->type() == GetterSetterType) {
+            JSValue::type(*location) == GetterSetterType) {
         fillGetterPropertySlot(slot, location);
     } else {
         slot.setValueSlot(this, location);
@@ -650,7 +650,12 @@ inline bool JSCell::isObject(const ClassInfo *info) const
 // this method is here to be after the inline declaration of JSCell::isObject
 inline bool JSValue::isObject(const ClassInfo *c) const
 {
-    return !JSImmediate::isImmediate(this) && asCell()->isObject(c);
+    return isObject(this, c);
+}
+
+inline bool JSValue::isObject(const JSValue *value, const ClassInfo *c)
+{
+    return !JSImmediate::isImmediate(value) && value->asCell()->isObject(c);
 }
 
 // It may seem crazy to inline a function this large but it makes a big difference
@@ -664,7 +669,7 @@ inline bool JSObject::getPropertySlot(ExecState *exec, const Identifier &propert
         }
 
         JSValue *proto = object->_proto;
-        if (!proto->isObject()) {
+        if (!JSValue::isObject(proto)) {
             return false;
         }
 
@@ -674,7 +679,7 @@ inline bool JSObject::getPropertySlot(ExecState *exec, const Identifier &propert
 
 inline void JSObject::getPropertyNames(ExecState *exec, PropertyNameArray &propertyNames, PropertyMap::PropertyMode mode)
 {
-    for (JSObject *cur = this; cur; cur = cur->_proto->getObject()) {
+    for (JSObject *cur = this; cur; cur = JSValue::getObject(cur->_proto)) {
         cur->getOwnPropertyNames(exec, propertyNames, mode);
     }
 }

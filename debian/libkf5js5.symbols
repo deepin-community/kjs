@@ -200,8 +200,17 @@ libKF5JS.so.5 libkf5js5 #MINVER#
  _ZN3KJS7CStringD2Ev@Base 4.96.0
  _ZN3KJS7CStringaSEPKc@Base 4.96.0
  _ZN3KJS7CStringaSERKS0_@Base 4.96.0
+ _ZN3KJS7JSValue10getByIndexEPKS0_PNS_9ExecStateEj@Base 5.89.0
+ _ZN3KJS7JSValue15toInt32SlowCaseEPKS0_PNS_9ExecStateERb@Base 5.89.0
  _ZN3KJS7JSValue15toInt32SlowCaseEdRb@Base 4.96.0
+ _ZN3KJS7JSValue16toUInt32SlowCaseEPKS0_PNS_9ExecStateERb@Base 5.89.0
  _ZN3KJS7JSValue16toUInt32SlowCaseEdRb@Base 4.96.0
+ _ZN3KJS7JSValue20toIntegerPreserveNaNEPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue7toFloatEPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue8toObjectEPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue8toStringEPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue8toUInt16EPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue9toIntegerEPKS0_PNS_9ExecStateE@Base 5.89.0
  (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD0Ev@Base 5.25.0
  (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD1Ev@Base 5.25.0
  (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD2Ev@Base 5.25.0
@@ -403,12 +412,8 @@ libKF5JS.so.5 libkf5js5 #MINVER#
  _ZNK3KJS6JSCell9getStringEv@Base 4.96.0
  _ZNK3KJS6JSCell9getUInt32ERj@Base 4.96.0
  _ZNK3KJS7JSValue10getByIndexEPNS_9ExecStateEj@Base 4.96.0
- _ZNK3KJS7JSValue15toInt32SlowCaseEPNS_9ExecStateERb@Base 4.96.0
- _ZNK3KJS7JSValue16toUInt32SlowCaseEPNS_9ExecStateERb@Base 4.96.0
  _ZNK3KJS7JSValue20toIntegerPreserveNaNEPNS_9ExecStateE@Base 4.96.0
  _ZNK3KJS7JSValue7toFloatEPNS_9ExecStateE@Base 4.96.0
- _ZNK3KJS7JSValue8toObjectEPNS_9ExecStateE@Base 4.96.0
- _ZNK3KJS7JSValue8toStringEPNS_9ExecStateE@Base 5.49.0
  _ZNK3KJS7JSValue8toUInt16EPNS_9ExecStateE@Base 4.96.0
  _ZNK3KJS7JSValue9toIntegerEPNS_9ExecStateE@Base 4.96.0
  _ZNK3KJS7UString10UTF8StringEv@Base 4.96.0
@@ -450,7 +455,6 @@ libKF5JS.so.5 libkf5js5 #MINVER#
  _ZNK3KJS8JSObject9classNameEv@Base 4.96.0
  _ZNK3KJS8JSObject9toBooleanEPNS_9ExecStateE@Base 4.96.0
  _ZNK3KJS9ExecState18lexicalInterpreterEv@Base 4.96.0
- (optional=templinst|subst)_ZNSt5dequeIPN3KJS7JSValueESaIS2_EE17_M_reallocate_mapE{size_t}b@Base 5.70.0
  _ZTIN14WTFNoncopyable11NoncopyableE@Base 4.96.0
  _ZTIN3KJS11FunctionImpE@Base 4.96.0
  _ZTIN3KJS11InterpreterE@Base 4.96.0

@@ -207,7 +207,7 @@ public:
     VarDeclVisitor(ExecState *exec) : m_exec(exec)
     {}
 
-    virtual Node *visit(Node *node)
+    Node *visit(Node *node) override
     {
         node->processVarDecl(m_exec);
 
@@ -229,7 +229,7 @@ public:
     FuncDeclVisitor(ExecState *exec) : m_exec(exec)
     {}
 
-    virtual Node *visit(Node *node)
+    Node *visit(Node *node) override
     {
         node->processFuncDecl(m_exec);
 
@@ -1147,8 +1147,8 @@ PackageObject *PackageNameNode::resolvePackage(ExecState *exec,
 
     // Let's see whether the package was already resolved previously.
     JSValue *v = baseObject->get(exec, id);
-    if (v && !v->isUndefined()) {
-        if (!v->isObject()) {
+    if (v && !JSValue::isUndefined(v)) {
+        if (!JSValue::isObject(v)) {
             // Symbol conflict
             throwError(exec, GeneralError, "Invalid type of package %s", id);
             return nullptr;

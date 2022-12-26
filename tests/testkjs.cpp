@@ -120,7 +120,7 @@ long StopWatch::getElapsedMS()
 class GlobalImp : public JSGlobalObject
 {
 public:
-    virtual UString className() const
+    UString className() const override
     {
         return "global";
     }
@@ -130,11 +130,11 @@ class TestFunctionImp : public JSObject
 {
 public:
     TestFunctionImp(int i, int length);
-    virtual bool implementsCall() const
+    bool implementsCall() const override
     {
         return true;
     }
-    virtual JSValue *callAsFunction(ExecState *exec, JSObject *thisObj, const List &args);
+    JSValue *callAsFunction(ExecState *exec, JSObject *thisObj, const List &args) override;
 
     enum { Print, Debug, Quit, GC, Version, Run };
 
@@ -151,10 +151,10 @@ JSValue *TestFunctionImp::callAsFunction(ExecState *exec, JSObject *, const List
 {
     switch (id) {
     case Print:
-        printf("--> %s\n", args[0]->toString(exec).UTF8String().c_str());
+        printf("--> %s\n", JSValue::toString(args[0], exec).UTF8String().c_str());
         return jsUndefined();
     case Debug:
-        fprintf(stderr, "--> %s\n", args[0]->toString(exec).UTF8String().c_str());
+        fprintf(stderr, "--> %s\n", JSValue::toString(args[0], exec).UTF8String().c_str());
         return jsUndefined();
     case GC: {
         JSLock lock;
@@ -167,7 +167,7 @@ JSValue *TestFunctionImp::callAsFunction(ExecState *exec, JSObject *, const List
         return jsUndefined();
     case Run: {
         StopWatch stopWatch;
-        char *fileName = strdup(args[0]->toString(exec).UTF8String().c_str());
+        char *fileName = strdup(JSValue::toString(args[0], exec).UTF8String().c_str());
         char *script = createStringWithContentsOfFile(fileName);
         if (!script) {
             return throwError(exec, GeneralError, "Could not open file.");
