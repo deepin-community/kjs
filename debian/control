@@ -3,16 +3,16 @@ Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Aurélien COUDERC <coucouf@debian.org>,
-           Norbert Preining <norbert@preining.info>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
-               extra-cmake-modules (>= 5.90.0~),
+               dh-sequence-kf5,
+               extra-cmake-modules (>= 5.103.0~),
                libkf5doctools-dev,
                libpcre3-dev,
                pkg-config,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/frameworks/kjs
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kjs
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kjs.git
@@ -21,7 +21,7 @@ Rules-Requires-Root: no
 Package: libkf5js5
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Support for JS scripting in Qt applications
  Addon library to Qt which adds JavaScript scripting support.
  .
@@ -34,7 +34,7 @@ Breaks: libkf5jsembed-dev (<< 5.54),
 Package: libkf5jsapi5
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Support for JS scripting in Qt applications
  Addon library to Qt which adds JavaScript scripting support.
  .
@@ -55,4 +55,4 @@ Description: Support for JS scripting in Qt applications
  This package is part of KDE Frameworks 5.
  .
  This package contains the development files.
-Breaks: libkf5jsembed-dev (<< 5.54), libkf5khtml-dev (<< 5.54)
+Breaks: libkf5jsembed-dev (<< 5.54), libkf5khtml-dev (<< 5.54),

@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.78.0 armel armhf hppa hurd-i386 i386 m68k mipsel powerpc sh4 x32
+# SymbolsHelper-Confirmed: 5.94.0 amd64 i386
 libKF5JS.so.5 libkf5js5 #MINVER#
 * Build-Depends-Package: libkf5kjs-dev
  _ZN3KJS10Identifier11addSlowCaseEPNS_7UString3RepE@Base 4.96.0
@@ -207,8 +207,8 @@ libKF5JS.so.5 libkf5js5 #MINVER#
  _ZN3KJS7JSValue16toUInt32SlowCaseEdRb@Base 4.96.0
  _ZN3KJS7JSValue20toIntegerPreserveNaNEPKS0_PNS_9ExecStateE@Base 5.89.0
  _ZN3KJS7JSValue7toFloatEPKS0_PNS_9ExecStateE@Base 5.89.0
+ _ZN3KJS7JSValue8toNumberEPKS0_PNS_9ExecStateE@Base 5.94.0
  _ZN3KJS7JSValue8toObjectEPKS0_PNS_9ExecStateE@Base 5.89.0
- _ZN3KJS7JSValue8toStringEPKS0_PNS_9ExecStateE@Base 5.89.0
  _ZN3KJS7JSValue8toUInt16EPKS0_PNS_9ExecStateE@Base 5.89.0
  _ZN3KJS7JSValue9toIntegerEPKS0_PNS_9ExecStateE@Base 5.89.0
  (optional=gccinternal|arch=!armel !armhf)_ZN3KJS7JSValueD0Ev@Base 5.25.0
